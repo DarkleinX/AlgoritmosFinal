@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Lista de usuarios</title>
+</head>
+<body>
+
+
+<table border = "4">
+	
+	<thead>	
+		<tr>
+		
+			<th>Nombre</th>
+			<th>Apellido</th>
+			<th>Usuario</th>
+			<th>Contraseña</th>
+			
+		</tr>
+	<thead>
+
+	<tbody>
+		<tr th:each = "objAlu : ${userlist}">
+			<td th:text = "${objAlu.nombre}"></td>
+			<td th:text = "${objAlu.apellido}"></td>
+			<td th:text = "${objAlu.usuario}"></td>
+			<td th:text = "${objAlu.password}"></td>
+		</tr>
+	</tbody>
+
+
+
+</table>
+
+
+</body>
+</html>
